@@ -26,6 +26,7 @@ RUN apk add --no-cache \
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+ENV test_difference=0.0.2
 
 RUN pip3 config set global.break-system-packages true
 RUN pip3 install pipenv
